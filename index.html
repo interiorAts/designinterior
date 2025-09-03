@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior ATS Design Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">Interior ATS</h1>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Space</h1>
+            <p>Professional interior design services</p>
+            <button class="cta-btn" onclick="scrollToSection('contact')">Get Started</button>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Residential Design</h3>
+                    <p>Complete home makeovers</p>
+                </div>
+                <div class="service-card">
+                    <h3>Commercial Spaces</h3>
+                    <p>Office and retail design</p>
+                </div>
+                <div class="service-card">
+                    <h3>Consultation</h3>
+                    <p>Expert design advice</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-img"></div>
+                    <h3>Modern Living Room</h3>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img"></div>
+                    <h3>Executive Office</h3>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img"></div>
+                    <h3>Luxury Bedroom</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><strong>Email:</strong> startify30@gmail.com</p>
+                    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Interior ATS Design Studio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
