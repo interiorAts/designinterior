@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interior ATS Design Studio</title>
+    <title>ATS Interiors - 3D & 2D Design Studio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
+    <nav class="premium-nav">
         <div class="nav-container">
-            <h1 class="logo">Interior ATS</h1>
+            <div class="logo-section">
+                <div class="logo-icon">🏡</div>
+                <h1 class="logo">ATS Interiors</h1>
+            </div>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link"><span class="nav-icon">🏠</span>Home</a></li>
+                <li><a href="#services" class="nav-link"><span class="nav-icon">⚡</span>Services</a></li>
+                <li><a href="#gallery" class="nav-link"><span class="nav-icon">🎨</span>Gallery</a></li>
+                <li><a href="#about" class="nav-link"><span class="nav-icon">👤</span>About</a></li>
+                <li><a href="#contact" class="nav-link"><span class="nav-icon">📧</span>Contact</a></li>
             </ul>
+            <div class="nav-cta">
+                <a href="mailto:aditishivhare064@gmail.com?subject=Interior Design Quote Request&body=Hi, I would like to request a quote for interior design services." class="nav-btn">Get Quote</a>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -26,47 +33,169 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Transform Your Space</h1>
-            <p>Professional interior design services</p>
-            <button class="cta-btn" onclick="scrollToSection('contact')">Get Started</button>
+            <h1>3D & 2D Interior Design</h1>
+            <p>Visualize your dream space with cutting-edge 3D modeling and traditional 2D design</p>
+            <button class="cta-btn" onclick="scrollToSection('gallery')">View Our Work</button>
+        </div>
+        <div class="hero-visual">
+            <div class="rotating-cube" id="cube">
+                <div class="face front">3D</div>
+                <div class="face back">2D</div>
+                <div class="face right">ATS</div>
+                <div class="face left">DESIGN</div>
+                <div class="face top">STUDIO</div>
+                <div class="face bottom">INTERIOR</div>
+            </div>
         </div>
     </section>
 
     <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2>Our Design Services</h2>
             <div class="services-grid">
-                <div class="service-card">
-                    <h3>Residential Design</h3>
-                    <p>Complete home makeovers</p>
+                <div class="service-card" data-service="3d">
+                    <div class="service-icon">🏠</div>
+                    <h3>3D Visualization</h3>
+                    <p>Photorealistic 3D renders and virtual walkthroughs</p>
+                    <ul>
+                        <li>3D Floor Plans</li>
+                        <li>Virtual Reality Tours</li>
+                        <li>Realistic Lighting</li>
+                        <li>Material Previews</li>
+                    </ul>
                 </div>
-                <div class="service-card">
-                    <h3>Commercial Spaces</h3>
-                    <p>Office and retail design</p>
+                <div class="service-card" data-service="2d">
+                    <div class="service-icon">📐</div>
+                    <h3>2D Design Plans</h3>
+                    <p>Detailed technical drawings and layout plans</p>
+                    <ul>
+                        <li>Floor Plans</li>
+                        <li>Elevation Drawings</li>
+                        <li>Furniture Layout</li>
+                        <li>Technical Specs</li>
+                    </ul>
                 </div>
-                <div class="service-card">
-                    <h3>Consultation</h3>
-                    <p>Expert design advice</p>
+                <div class="service-card" data-service="both">
+                    <div class="service-icon">✨</div>
+                    <h3>Complete Package</h3>
+                    <p>Combined 2D planning with 3D visualization</p>
+                    <ul>
+                        <li>Design Consultation</li>
+                        <li>2D + 3D Combo</li>
+                        <li>Project Management</li>
+                        <li>Implementation Support</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="portfolio" class="portfolio">
+    <section id="gallery" class="gallery">
         <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-img"></div>
-                    <h3>Modern Living Room</h3>
+            <h2>Design Gallery</h2>
+            <div class="gallery-tabs">
+                <button class="tab-btn active" data-tab="2d">Our Designs</button>
+            </div>
+            
+            <div class="gallery-content">
+                <div class="tab-content active" id="2d-tab">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="gallery-img plan-2d" data-room="s1">
+                                <img src="s1.jpg" alt="Design S1" class="design-image">
+                                <div class="design-label">S1</div>
+                                <div class="overlay">
+                                    <button class="view-btn" onclick="open3DViewer('s1')">View Design</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-img plan-2d" data-room="s2">
+                                <img src="s2.jpg" alt="Design S2" class="design-image">
+                                <div class="design-label">S2</div>
+                                <div class="overlay">
+                                    <button class="view-btn" onclick="open3DViewer('s2')">View Design</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-img plan-2d" data-room="s3">
+                                <img src="s3.jpg" alt="Design S3" class="design-image">
+                                <div class="design-label">S3</div>
+                                <div class="overlay">
+                                    <button class="view-btn" onclick="open3DViewer('s3')">View Design</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-img plan-2d" data-room="s4">
+                                <img src="s4.jpg" alt="Design S4" class="design-image">
+                                <div class="design-label">S4</div>
+                                <div class="overlay">
+                                    <button class="view-btn" onclick="open3DViewer('s4')">View Design</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-img plan-2d" data-room="s5">
+                                <img src="s5.jpg" alt="Design S5" class="design-image">
+                                <div class="design-label">S5</div>
+                                <div class="overlay">
+                                    <button class="view-btn" onclick="open3DViewer('s5')">View Design</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-img"></div>
-                    <h3>Executive Office</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About ATS Interiors</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="atsImage.jpeg" alt="Aditi Shivhare - Interior Designer" class="designer-image">
+                    <div class="image-overlay">
+                        <div class="overlay-text">Aditi Shivhare</div>
+                    </div>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-img"></div>
-                    <h3>Luxury Bedroom</h3>
+                <div class="about-info">
+                    <h3>Aditi Shivhare - Interior Designer</h3>
+                    <p>With a passion for innovative design and attention to detail, I specialize in creating beautiful, functional spaces that reflect your unique style and personality.</p>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">🎨</div>
+                            <h4>Design Layout</h4>
+                            <p>Expert space planning and layout optimization</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🤝</div>
+                            <h4>Client Flexibility</h4>
+                            <p>Adaptable to all client concerns and preferences</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Finished Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Official Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Years Experience</div>
                 </div>
             </div>
         </div>
@@ -74,24 +203,57 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact Us</h2>
+            <h2>Let's Create Something Beautiful</h2>
+            <div class="contact-hero">
+                <p class="contact-subtitle">Ready to transform your space? Get in touch for a personalized quote.</p>
+            </div>
             <div class="contact-content">
-                <div class="contact-info">
-                    <p><strong>Email:</strong> startify30@gmail.com</p>
-                    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <p>aditishivhare064@gmail.com</p>
+                    <a href="mailto:aditishivhare064@gmail.com?subject=Interior Design Inquiry&body=Hi, I'm interested in your interior design services." class="contact-btn">Send Email</a>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
+                <div class="contact-card">
+                    <div class="contact-icon">💼</div>
+                    <h3>Our Services</h3>
+                    <p>3D Visualization • 2D Planning • Complete Design Solutions</p>
+                    <a href="mailto:aditishivhare064@gmail.com?subject=Service Quote Request&body=Hi, I would like to request a quote for:" class="contact-btn">Request Quote</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🎨</div>
+                    <h3>Quick Consultation</h3>
+                    <p>Discuss your project ideas and get expert advice</p>
+                    <a href="mailto:aditishivhare064@gmail.com?subject=Design Consultation&body=Hi, I'd like to schedule a consultation for my project." class="contact-btn">Book Now</a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- 3D Viewer Modal -->
+    <div class="modal" id="viewer-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="viewer-container">
+                <div class="viewer-placeholder" id="viewer-content">
+                    <div class="viewer-demo">
+                        <h3 id="viewer-title">3D Room Viewer</h3>
+                        <div class="viewer-controls">
+                            <button onclick="rotateView('left')">← Rotate</button>
+                            <button onclick="rotateView('right')">Rotate →</button>
+                            <button onclick="toggleWireframe()">Wireframe</button>
+                        </div>
+                        <div class="viewer-display" id="viewer-display">
+                            <div class="room-3d" id="room-3d"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Interior ATS Design Studio</p>
+        <p>&copy; 2024 ATS Interiors - 3D & 2D Specialists</p>
     </footer>
 
     <script src="script.js"></script>
