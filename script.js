@@ -201,9 +201,37 @@ window.addEventListener('scroll', () => {
     }
 });
 
+function openImage(src) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    modal.style.display = 'block';
+    modalImg.src = src;
+    document.body.style.overflow = 'hidden';
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function initImageModal() {
+    const modal = document.getElementById('imageModal');
+    const closeBtn = document.querySelector('.image-modal-close');
+    
+    if (closeBtn) closeBtn.addEventListener('click', closeImageModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeImageModal();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeImageModal();
+    });
+}
+
 // Initialize components when page loads
 document.addEventListener('DOMContentLoaded', () => {
     initBeforeAfterSlider();
+    initImageModal();
     
     // Add loading animation to gallery items
     const observerOptions = {

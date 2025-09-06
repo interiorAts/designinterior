@@ -100,61 +100,61 @@
                     <div class="gallery-grid">
                         <div class="gallery-item">
                             <div class="gallery-img plan-2d">
-                                <img src="at1.jpeg" alt="Design S1" class="design-image">
+                                <img src="at1.jpeg" alt="Design S1" class="design-image" onclick="openImage('at1.jpeg')">
                                 <div class="design-label">S1</div>
                             </div>
                         </div>
                         <div class="gallery-item">
                             <div class="gallery-img plan-2d">
-                                <img src="at2.jpeg" alt="Design S2" class="design-image">
+                                <img src="at2.jpeg" alt="Design S2" class="design-image" onclick="openImage('at2.jpeg')">
                                 <div class="design-label">S2</div>
                             </div>
                         </div>
                         <div class="gallery-item">
                             <div class="gallery-img plan-2d">
-                                <img src="at3.jpeg" alt="Design S3" class="design-image">
+                                <img src="at3.jpeg" alt="Design S3" class="design-image" onclick="openImage('at3.jpeg')">
                                 <div class="design-label">S3</div>
                             </div>
                         </div>
                         <div class="gallery-item">
                             <div class="gallery-img plan-2d">
-                                <img src="at4.jpeg" alt="Design S4" class="design-image">
+                                <img src="at4.jpeg" alt="Design S4" class="design-image" onclick="openImage('at4.jpeg')">
                                 <div class="design-label">S4</div>
                             </div>
                         </div>
                         <div class="gallery-item">
                             <div class="gallery-img plan-2d">
-                                <img src="at5.jpeg" alt="Design S5" class="design-image">
+                                <img src="at5.jpeg" alt="Design S5" class="design-image" onclick="openImage('at5.jpeg')">
                                 <div class="design-label">S5</div>
                             </div>
                         </div>
                         <div class="gallery-item">
                             <div class="gallery-img plan-2d">
-                                <img src="s1.jpg" alt="2D Layout S1" class="design-image">
+                                <img src="s1.jpg" alt="2D Layout S1" class="design-image" onclick="openImage('s1.jpg')">
                                 <div class="design-label">L1</div>
                             </div>
                         </div>
                         <div class="gallery-item">
                             <div class="gallery-img plan-2d">
-                                <img src="s2.jpg" alt="2D Layout S2" class="design-image">
+                                <img src="s2.jpg" alt="2D Layout S2" class="design-image" onclick="openImage('s2.jpg')">
                                 <div class="design-label">L2</div>
                             </div>
                         </div>
                         <div class="gallery-item">
                             <div class="gallery-img plan-2d">
-                                <img src="s3.jpg" alt="2D Layout S3" class="design-image">
+                                <img src="s3.jpg" alt="2D Layout S3" class="design-image" onclick="openImage('s3.jpg')">
                                 <div class="design-label">L3</div>
                             </div>
                         </div>
                         <div class="gallery-item">
                             <div class="gallery-img plan-2d">
-                                <img src="s4.jpg" alt="2D Layout S4" class="design-image">
+                                <img src="s4.jpg" alt="2D Layout S4" class="design-image" onclick="openImage('s4.jpg')">
                                 <div class="design-label">L4</div>
                             </div>
                         </div>
                         <div class="gallery-item">
                             <div class="gallery-img plan-2d">
-                                <img src="s5.jpg" alt="2D Layout S5" class="design-image">
+                                <img src="s5.jpg" alt="2D Layout S5" class="design-image" onclick="openImage('s5.jpg')">
                                 <div class="design-label">L5</div>
                             </div>
                         </div>
@@ -169,7 +169,7 @@
             <h2>About ATS Interiors</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="atsImage.jpeg" alt="Aditi Shivhare - Interior Designer" class="designer-image">
+                    <img src="ats1.jpeg" alt="Aditi Shivhare - Interior Designer" class="designer-image">
                     <div class="image-overlay">
                         <div class="overlay-text">Aditi Shivhare</div>
                     </div>
@@ -274,6 +274,14 @@
     <footer>
         <p>&copy; 2024 ATS Interiors - 3D & 2D Specialists</p>
     </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="image-modal-close" onclick="closeImageModal()">&times;</span>
+        <div class="image-modal-content">
+            <img id="modalImage" src="" alt="Expanded Image">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
