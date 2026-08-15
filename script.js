@@ -4,12 +4,14 @@ const navMenu = document.getElementById('nav-menu');
 
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
 });
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
     });
 });
 
@@ -193,11 +195,11 @@ window.addEventListener('scroll', () => {
         cube.style.transform = `rotateX(${scrolled * 0.1}deg) rotateY(${scrolled * 0.1}deg)`;
     }
     
-    // Navbar background opacity
-    if (scrolled > 100) {
-        nav.style.background = 'rgba(255, 255, 255, 0.98)';
+    // Navbar scroll effect
+    if (scrolled > 50) {
+        document.getElementById('navbar').classList.add('scrolled');
     } else {
-        nav.style.background = 'rgba(255, 255, 255, 0.95)';
+        document.getElementById('navbar').classList.remove('scrolled');
     }
 });
 

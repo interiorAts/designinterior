@@ -7,20 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="premium-nav">
+    <nav class="premium-nav" id="navbar">
         <div class="nav-container">
-            <div class="logo-section">
+            <a href="#home" class="logo-section">
                 <div class="logo-icon">🏡</div>
-                <h1 class="logo">Upscale Interiors</h1>
-            </div>
+                <div class="logo-text">
+                    <span class="logo-main">Upscale</span>
+                    <span class="logo-sub">Interiors</span>
+                </div>
+            </a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link"><span class="nav-icon">🏠</span>Home</a></li>
-                <li><a href="#services" class="nav-link"><span class="nav-icon">⚡</span>Services</a></li>
-                <li><a href="#gallery" class="nav-link"><span class="nav-icon">🎨</span>Gallery</a></li>
-                <li><a href="#about" class="nav-link"><span class="nav-icon">👤</span>About</a></li>
-                <li><a href="#contact" class="nav-link"><span class="nav-icon">📧</span>Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#3d-work" class="nav-link">3D Work</a></li>
+                <li><a href="#2d-work" class="nav-link">2D Work</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link nav-cta-link">Contact</a></li>
             </ul>
-
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -130,6 +134,51 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="3d-work" class="three-d-work">
+        <div class="container">
+            <h2>3D Work</h2>
+            <p class="section-subtitle">Photorealistic 3D visualizations bringing spaces to life</p>
+            <div class="threed-grid">
+                <div class="threed-item" onclick="openImage('3dDesign-01.jpeg')"><img src="3dDesign-01.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-02.jpeg')"><img src="3dDesign-02.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-03.jpeg')"><img src="3dDesign-03.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-04.jpeg')"><img src="3dDesign-04.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-05.jpeg')"><img src="3dDesign-05.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-06.jpeg')"><img src="3dDesign-06.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-07.jpeg')"><img src="3dDesign-07.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-08.jpeg')"><img src="3dDesign-08.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-09.jpeg')"><img src="3dDesign-09.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-10.jpeg')"><img src="3dDesign-10.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-11.jpeg')"><img src="3dDesign-11.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-12.jpeg')"><img src="3dDesign-12.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-13.jpeg')"><img src="3dDesign-13.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-14.jpeg')"><img src="3dDesign-14.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-15.jpeg')"><img src="3dDesign-15.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-16.jpeg')"><img src="3dDesign-16.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-17.jpeg')"><img src="3dDesign-17.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-18.jpeg')"><img src="3dDesign-18.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-19.jpeg')"><img src="3dDesign-19.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-20.jpeg')"><img src="3dDesign-20.jpeg" alt="3D Design"></div>
+                <div class="threed-item" onclick="openImage('3dDesign-21.jpeg')"><img src="3dDesign-21.jpeg" alt="3D Design"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="2d-work" class="two-d-work">
+        <div class="container">
+            <h2>Glimpses of 2D Work</h2>
+            <p class="section-subtitle">Detailed 2D floor plans and layout designs</p>
+            <div class="threed-grid">
+                <div class="threed-item" onclick="openImage('2d1.jpg')"><img src="2d1.jpg" alt="2D Design"></div>
+                <div class="threed-item" onclick="openImage('2d2.jpg')"><img src="2d2.jpg" alt="2D Design"></div>
+                <div class="threed-item" onclick="openImage('2d3.jpg')"><img src="2d3.jpg" alt="2D Design"></div>
+                <div class="threed-item" onclick="openImage('2d4.jpg')"><img src="2d4.jpg" alt="2D Design"></div>
+                <div class="threed-item" onclick="openImage('2d5.jpg')"><img src="2d5.jpg" alt="2D Design"></div>
+                <div class="threed-item" onclick="openImage('2d6.jpg')"><img src="2d6.jpg" alt="2D Design"></div>
             </div>
         </div>
     </section>
